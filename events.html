@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai-clinic</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body{
+            background-color: #d7f3ff;
+        }
+.spinner-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.spinner-img {
+    width: auto;
+    height: 300px; 
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.blood-container {
+    position: relative;
+    width: 100px;
+    height: 300px;
+    background-color: #f8f8f8;
+    border: 2px solid #ccc;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+}
+
+.blood-glass {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 80px;
+    height: 0;
+    background-color: #ff0000;
+    transition: height 1s ease-in-out;
+    border-radius: 0 0 50px 50px; 
+    z-index: -1; 
+}
+
+.blood-container::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    border-bottom: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+   
+   
+}
+.donation-text {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.english-text {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.additional-info {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(43, 118, 199);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.donation-text{
+    display: block;
+}
+.donation-container {
+    display: flex;
+    align-items: center;
+}
+
+.blood-container {
+    background-color: #ccc;
+}
+
+.donation-image {
+    margin-left: 100px; 
+}
+
+.donation-image img {
+    margin-left: 100px; 
+}
+.slideshow-container {
+  max-width: 500px;
+  max-height: 300px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo">Ai+ clinic</div>
+                </a>
+                <br><span class="description">Good clinic</span>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="spinner-container">
+        <img id="spinner-img" src="assets/img/logo.png" alt="Logo" class="spinner-img">
+
+    </div>
+    
+
+    <h1><center>Blood donation</center></h1>
+    <p><center>Your donated blood can make a significant difference, as it can be separated into various components to help different individuals in need. Join us in our blood donation drive and become a part of this noble cause. Your donation can help ensure that someone, somewhere, receives the gift of life. Together, we can make a positive impact on the health and well-being of our community.</center></p>
+    <div class="container ">
+        <div class="donation-container">
+            <div class="blood-container">
+                <div class="blood-glass" id="blood-glass"></div>
+            </div>
+            <div class="donation-image">
+                <img src="assets/img/donation.jpg" width="400px" height="auto">
+            </div>
+        </div>
+    </div>
+    
+    <button id="donate-button" onclick="playSound()">Donate Blood</button>
+<audio id="button-sound">
+    <source src="assets/sound/success-1-6297.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+<h1><center>Cleanup day</center></h1>
+<p><center>Community Cleanup Day is an event that brings residents and volunteers together to make a positive impact on their local environment. It's a day dedicated to improving the cleanliness and aesthetics of neighborhoods, parks, and public spaces. Participants, often armed with trash bags, gloves, and a strong sense of community spirit, gather to pick up litter, remove graffiti, plant trees, and engage in various activities aimed at enhancing their surroundings. </center></p>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="assets/img/cleanup.jpg" style="width:100%">
+ 
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="assets/img/cabinet3.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="assets/img/cabinet2.jpg" style="width:100%">
+  
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<br>
+<br>
+    <div id="footerwrap">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-4">
+					<p><b>Lorem ipsum dolor sit amet.</b></p>
+				</div>
+			
+				<div class="col-lg-4">
+					<p>Doctors is amazing.</p>
+				</div>
+				<div class="col-lg-4">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, debitis./a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    
+
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+   
+    <script src="assets/js/bloodanimation.js">
+    </script>
+    <script>
+    function playSound() {
+        var audio = document.getElementById("button-sound");
+        audio.play();
+      }
+      </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Services - Ai-clinic</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">>
+    
+    <style>
+        body{
+            background-color: #d0dee3;
+        }
+        .card {
+    border: none;
+    margin-bottom: 50px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    transition: transform 0.3s ease; 
+        }
+.card:hover {
+    transform: scale(1.07); 
+}
+
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover; /* Make sure the images maintain their aspect ratio and fit the card */
+            width: 100%;  
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 100px;
+            
+
+        }
+
+        .card {
+            flex: 0 0 calc(33.333% - 20px); 
+            margin: 10px;
+        }
+
+.price-list {
+    margin-top: 20px;
+}
+
+.service-name {
+    font-weight: bold;
+}
+
+.service-price {
+    transition: color 0.3s ease;
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo">Ai+ clinic</div>
+                </a>
+                <br><span class="description">Good clinic</span>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container cards">
+        <div class="row">
+            <!-- Card 1 - Therapy -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="assets/img/cabinet1.jpg" class="card-img-top" alt="Therapy">
+                    <div class="card-body">
+                        <h5 class="card-title">Therapy</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="assets/img/cabinet2.jpg" class="card-img-top" alt="Therapy">
+                    <div class="card-body">
+                        <h5 class="card-title">Dental</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="assets/img/cabinet3.jpg" class="card-img-top" alt="Therapy">
+                    <div class="card-body">
+                        <h5 class="card-title">RMI</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="assets/img/cabinet1.jpg" class="card-img-top" alt="Therapy">
+                    <div class="card-body">
+                        <h5 class="card-title">Therapy</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="assets/img/cabinet1.jpg" class="card-img-top" alt="Therapy">
+                    <div class="card-body">
+                        <h5 class="card-title">Therapy</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="assets/img/cabinet1.jpg" class="card-img-top" alt="Therapy">
+                    <div class="card-body">
+                        <h5 class="card-title">Therapy</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+</body>
+</html>
